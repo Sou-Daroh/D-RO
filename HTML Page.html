@@ -140,52 +140,60 @@
 
     <section id="Quotes">
         <h3>Quote of the day:</h3>
-        <p>Life is like riding a bicycle. To keep your balance you must keep moving.</p>
+        <h4>Life is like riding a bicycle. To keep your balance you must keep moving.</h4>
     </section>
 
     <section id="intro">
-        <h1>We're on a journey to explore the cosmos and your insights matter!<br>Answer these cosmic questions to reveal your celestial persona.</h1>
+        <h1>Quick Survey: <br> Dream Destination</h1>
     </section>
 
     <section id="survey">
-        <form action="submit_survey.php" method="POST">
-            <h3>Question 1: Space Explorer or Time Traveler?</h3>
+        <h2>Discover Your Dream Travel Destination</h2>
+        <p>Answer a few questions and find out your Dream Destination</p>
+        
+        <form action="submit_interesting_survey.php" method="POST">
+            <h3>Question 1: What type of scenery do you prefer?</h3>
             <label>
-                <input type="radio" name="exploration_type" value="space" required> Space Explorer
+                <input type="radio" name="scenery_type" value="beach" required> Beaches and coastlines
             </label>
             <label>
-                <input type="radio" name="exploration_type" value="time"> Time Traveler
+                <input type="radio" name="scenery_type" value="mountain"> Majestic mountains
             </label>
-
-            <h3>Question 2: Choose Your Constellation Companion</h3>
-            <select name="constellation" required>
-                <option value="orion">Orion the Hunter</option>
-                <option value="draco">Draco the Dragon</option>
-                <option value="cygnus">Cygnus the Swan</option>
-            </select>
-
-            <h3>Question 3: Galactic Snack Preference</h3>
+            
+            <h3>Question 2: What's your ideal weather?</h3>
             <label>
-                <input type="checkbox" name="snacks[]" value="star-shaped_cookies"> Star-Shaped Cookies
+                <input type="radio" name="weather" value="warm" required> Warm and sunny
             </label>
             <label>
-                <input type="checkbox" name="snacks[]" value="alien_ice_cream"> Alien Ice Cream
+                <input type="radio" name="weather" value="cool"> Cool and crisp
+            </label>
+            
+            <h3>Question 3: Choose your travel companions:</h3>
+            <label>
+                <input type="checkbox" name="companions[]" value="family"> Family
             </label>
             <label>
-                <input type="checkbox" name="snacks[]" value="cosmic_popcorn"> Cosmic Popcorn
-            </label>
-
-            <h3>Question 4: If You Could Visit a Celestial Event, Which Would It Be?</h3>
-            <label>
-                <input type="radio" name="celestial_event" value="aurora_borealis" required> Aurora Borealis on an Ice Planet
+                <input type="checkbox" name="companions[]" value="friends"> Friends
             </label>
             <label>
-                <input type="radio" name="celestial_event" value="supernova"> Witnessing a Supernova
+                <input type="checkbox" name="companions[]" value="solo"> Solo adventure
             </label>
-
-            <input type="submit" value="Discover Your Cosmic Persona">
+            
+            <h3>Question 4: What kind of activities do you enjoy?</h3>
+            <label>
+                <input type="checkbox" name="activities[]" value="relaxation"> Relaxation and spa
+            </label>
+            <label>
+                <input type="checkbox" name="activities[]" value="adventure"> Adventure and exploration
+            </label>
+            <label>
+                <input type="checkbox" name="activities[]" value="culture"> Immersing in local culture
+            </label>
+            
+            <input type="submit" value="Discover Your Dream Destination">
         </form>
     </section>
+    
 
     <section id="application">
         <h3>So you scrolled all the way down here, might as well apply for a job at D-RO</h3>
