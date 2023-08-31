@@ -1,37 +1,232 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <title> D-RO </title>
-</head>
-<body style="background-color: white; color: black; font-family: Arial">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>D-RO - Explore the Cosmos</title>
+    <style>
+        body {
+            background-color: #121212;
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            font-family: Arial, sans-serif;
+            background-color: #f0f0f0;
+            color: #333;
+        }
 
-    <header style="background-color: black; color: white; text-align: center">
+        header {
+            background-color: #007acc;
+            color: #fff;
+            text-align: center;
+            padding: 1rem 0;
+        }
+
+        h1 {
+            margin: 0;
+            font-size: 2.5rem;
+        }
+
+        h2 {
+            margin: 0;
+            font-size: 1.5rem;
+        }
+
+        section {
+            padding: 2rem;
+            text-align: center;
+        }
+
+        #jokes {
+            background-color: #fff;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            padding: 1.5rem;
+        }
+
+        #image img {
+            max-width: 100%;
+            border-radius: 10px;
+        }
+
+        #link {
+            background-color: #eee;
+            padding: 1rem 0;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        #link a {
+            color: #007acc;
+            text-decoration: none;
+        }
+
+        #Quotes {
+            background-color: #f7f7f7;
+            padding: 1rem 0;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        #intro {
+            background-color: #007acc;
+            color: #fff;
+            padding: 1.5rem;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        #survey {
+            background-color: #fff;
+            padding: 2rem;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        form {
+            max-width: 600px;
+            margin: 0 auto;
+        }
+
+        input[type="radio"],
+        input[type="checkbox"] {
+            margin-right: 5px;
+        }
+
+        input[type="submit"] {
+            background-color: #007acc;
+            color: #fff;
+            border: none;
+            padding: 10px 20px;
+            cursor: pointer;
+            border-radius: 5px;
+            transition: background-color 0.3s ease;
+        }
+
+        input[type="submit"]:hover {
+            background-color: #005faa;
+        }
+
+        footer {
+            background-color: #333;
+            color: #fff;
+            text-align: center;
+            padding: 1rem 0;
+        }
+    </style>
+</head>
+<body>
+    <header>
         <h1>Welcome to D-RO</h1>
-        <h2>D-RO</h2>
+        <h2>Explore the Cosmos</h2>
     </header>
-    
-    <section id="jokes" style="background-color: white">
+
+    <section id="jokes">
         <h2>Exploring the Lighter Side of Coding</h2>
         <p>Why did the web developer go broke? Because he lost his cache!</p>
     </section>
-    
-    <section id="image" style="background-color: white">
+
+    <section id="image">
         <figure>
-            <figcaption style="color: black;">The Cosmos</figcaption>
-            <img src="WHOA.PNG" alt="Awe-Inspiring Space" width="1280" height="720" title="Time is but a stubborn illusion">
+            <figcaption>The Cosmos.</figcaption>
+            <img src="WHOA.PNG" alt="Awe-Inspiring Space" title="Time is but a stubborn illusion">
         </figure>
     </section>
-    
-    <section id="link" style="background-color: white">
+
+    <section id="link">
         <p>Don't click here</p>
-        <a href="https://www.guthib.com" style="color: blue">Here</a>
+        <a href="https://www.guthib.com">Here</a>
     </section>
-    
-    <section id="Quotes" style="background-color: white">
-        <h3>Quotes of the day: Life is like riding a bicycle. To keep your balance you must keep moving.</h3>
+
+    <section id="Quotes">
+        <h3>Quote of the day:</h3>
+        <p>Life is like riding a bicycle. To keep your balance you must keep moving.</p>
     </section>
-    
-    <footer style="background-color: black; color: white; text-align: center">
+
+    <section id="intro">
+        <h1>We're on a journey to explore the cosmos and your insights matter!<br>Answer these cosmic questions to reveal your celestial persona.</h1>
+    </section>
+
+    <section id="survey">
+        <form action="submit_survey.php" method="POST">
+            <h3>Question 1: Space Explorer or Time Traveler?</h3>
+            <label>
+                <input type="radio" name="exploration_type" value="space" required> Space Explorer
+            </label>
+            <label>
+                <input type="radio" name="exploration_type" value="time"> Time Traveler
+            </label>
+
+            <h3>Question 2: Choose Your Constellation Companion</h3>
+            <select name="constellation" required>
+                <option value="orion">Orion the Hunter</option>
+                <option value="draco">Draco the Dragon</option>
+                <option value="cygnus">Cygnus the Swan</option>
+            </select>
+
+            <h3>Question 3: Galactic Snack Preference</h3>
+            <label>
+                <input type="checkbox" name="snacks[]" value="star-shaped_cookies"> Star-Shaped Cookies
+            </label>
+            <label>
+                <input type="checkbox" name="snacks[]" value="alien_ice_cream"> Alien Ice Cream
+            </label>
+            <label>
+                <input type="checkbox" name="snacks[]" value="cosmic_popcorn"> Cosmic Popcorn
+            </label>
+
+            <h3>Question 4: If You Could Visit a Celestial Event, Which Would It Be?</h3>
+            <label>
+                <input type="radio" name="celestial_event" value="aurora_borealis" required> Aurora Borealis on an Ice Planet
+            </label>
+            <label>
+                <input type="radio" name="celestial_event" value="supernova"> Witnessing a Supernova
+            </label>
+
+            <input type="submit" value="Discover Your Cosmic Persona">
+        </form>
+    </section>
+
+    <section id="application">
+        <h3>So you scrolled all the way down here, might as well apply for a job at D-RO</h3>
+        <h2>Job Application Form</h2>
+        <form>
+            <label for="full_name">Full Name:</label>
+            <input type="text" id="full_name" name="full_name" required><br><br>
+
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" required><br><br>
+
+            <label for="phone">Phone:</label>
+            <input type="tel" id="phone" name="phone" required><br><br>
+
+            <label for="subject">Subject/Position:</label>
+            <input type="text" id="subject" name="subject" required><br><br>
+
+            <label for="experience">Years of Experience:</label>
+            <input type="number" id="experience" name="experience" required><br><br>
+
+            <label for="previous_salary">Previous Salary:</label>
+            <input type="text" id="previous_salary" name="previous_salary" required><br><br>
+
+            <label for="qualification">Educational Qualification:</label>
+            <textarea id="qualification" name="qualification" rows="4" required></textarea><br><br>
+
+            <label for="bio_data">Bio Data:</label>
+            <textarea id="bio_data" name="bio_data" rows="4" required></textarea><br><br>
+
+            <label for="additional_info">Additional Information:</label>
+            <textarea id="additional_info" name="additional_info" rows="4"></textarea><br><br>
+            <label for="interview_date">Preferred Interview Date:</label>
+            <input type="date" id="interview_date" name="interview_date" required><br><br>
+            <label for="interview_time">Preferred Interview Time:</label>
+            <input type="time" id="interview_time" name="interview_time" required><br><br>
+
+            <input type="submit" value="Submit Application">
+        </form>
+    </section>
+
+    <footer>
         <p>&copy; 2023 D-RO. All rights reserved.</p>
     </footer>
 </body>
